@@ -14,7 +14,7 @@ namespace Graphs
     {
         static double[][] dataTable;
         static double[][] realDataTable;
-        static double[][] points;
+        static double[][][] points;
 
         /*
          * Parses data from clipboard to dataTable
@@ -102,45 +102,59 @@ namespace Graphs
             for (int i = 0; i < realDataTable.Length; i++)
                 realDataTable[i] = realDataTable[i].TakeWhile(x => x != 0).ToArray();
 
-            box.Clear();
+            /*box.Clear();
             foreach(double[] i in realDataTable)
             {
                 foreach (double j in i)
                     box.Text += j + " ";
                 box.Text += "\r\n";
-            }
+            }*/
         }
         /*
          * Approximates, cuts realDataArray, creates points array for drawing graphs
          */
         static public void graphPoints(TextBox box)
         {
-            box.Clear();
             if (realDataTable[0].Length == 0)
                 return;
             // Порядок полиномальной функции
             int p = 3;
+            int pNum = 10;
             double[][] funcs = new double[realDataTable.Length - 1][];
+            double[][] range = new double[realDataTable.Length - 1][];
 
-            /*
-             * 1.Посчитать функции апроксимации для каждого столбца.
-             * 2.Создать массив с точками для построения графиков.
-             */
-
+            points = new double[realDataTable.Length - 1][][];
+            for (int i = 0; i < points.Length; i++)
+            {
+                points[i] = new double[2][];
+                points[i][0] = new double[pNum];
+                points[i][1] = new double[pNum];
+            }
+                
 
             for (int i = 1; i < realDataTable.Length; i++)
             {
-                if (realDataTable[i].Length == 0)
-                    break;
-                
                 int rowMax = realDataTable[0].Length > realDataTable[i].Length ? realDataTable[i].Length : realDataTable[0].Length;
                 if (rowMax < 4 || rowMax == 0)
                     continue;
                
                 funcs[i-1] = Fit.Polynomial(realDataTable[0].Take(rowMax).ToArray(), realDataTable[i].Take(rowMax).ToArray(), p);
 
+                double minX = realDataTable[0][0];
+                double maxX = realDataTable[0][1];
+                double increment = (maxX - minX) / (pNum - 1);
+
+                for (int j = 0; j < pNum; j++)
+                {
+                    points[i-1][0][j] = minX + increment * j;
+                    double x = points[i-1][0][j];
+                    points[i-1][1][j] = 0;
+                    for (int z = 0; z <= p; z++)
+                        points[i-1][1][j] += (funcs[i - 1][z]) * (Math.Pow(x, z));
+                }
             }
 
+            box.Clear();
             foreach (double[] i in funcs)
             {
                 if (i == null)
@@ -149,6 +163,8 @@ namespace Graphs
                     box.Text += j + " ";
                 box.Text += "\r\n ";
             }
+            box.Text += "\r\n" + funcs.Length;
+
         }
     }
 }

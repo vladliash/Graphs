@@ -147,6 +147,7 @@
             this.inputTable.Size = new System.Drawing.Size(366, 573);
             this.inputTable.TabIndex = 0;
             this.inputTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTable_KeyDown);
+            this.inputTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.inputTable_CellValueChanged);
             // 
             // airFlow
             // 
