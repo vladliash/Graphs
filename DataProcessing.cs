@@ -13,9 +13,8 @@ namespace Graphs
     static class DataProcessing
     {
         static double[][] dataTable;
-        static double[,] realDataTable;
+        static double[][] realDataTable;
         static double[][] points;
-        static int[] rowMax;
 
         /*
          * Parses data from clipboard to dataTable
@@ -78,45 +77,78 @@ namespace Graphs
          */
         static public void parseTable(DataGridView table, TextBox box)
         {
-            rowMax = new int[6];
-            rowMax[0] = table.RowCount;
-            box.Text = rowMax[0].ToString();
-            realDataTable = new double[table.ColumnCount, table.RowCount];
+            realDataTable = new double[table.ColumnCount][];
+            for (int i = 0; i < realDataTable.Length; i++)
+                realDataTable[i] = new double[table.RowCount];
 
-            for (int j = 0; j < realDataTable.GetLength(0); j++)
+            for (int j = 0; j < realDataTable.Length; j++)
             {
                 
-                for (int i = 0; i < rowMax[0]; i++)
+                for (int i = 0; i < table.RowCount; i++)
                 {
                     double dub;
                     bool isit = double.TryParse((table[j, i]?.Value?.ToString())?.Replace('.', ','), out dub);
 
                     if (!isit || dub == 0)
                     {
-                        rowMax[j] = i;
-                        break;
+                        continue;
                     }
                     else
                     {
-                        realDataTable[j, i] = dub;
-                        rowMax[j] += 1;
+                        realDataTable[j][i] = dub;
                     }
                 }
+            }
+            for (int i = 0; i < realDataTable.Length; i++)
+                realDataTable[i] = realDataTable[i].TakeWhile(x => x != 0).ToArray();
+
+            box.Clear();
+            foreach(double[] i in realDataTable)
+            {
+                foreach (double j in i)
+                    box.Text += j + " ";
+                box.Text += "\r\n";
             }
         }
         /*
          * Approximates, cuts realDataArray, creates points array for drawing graphs
          */
-        static public void graphPoints()
+        static public void graphPoints(TextBox box)
         {
+            box.Clear();
+            if (realDataTable[0].Length == 0)
+                return;
             // Порядок полиномальной функции
             int p = 3;
-            double[,] funcs = new double[5,p+1];
+            double[][] funcs = new double[realDataTable.Length - 1][];
+
             /*
-             * 1. Посчитать функции апроксимации для каждого столбца.
-             * 2. Создать массив с точками для построения графиков.
+             * 1.Посчитать функции апроксимации для каждого столбца.
+             * 2.Создать массив с точками для построения графиков.
              */
 
+
+            for (int i = 1; i < realDataTable.Length; i++)
+            {
+                if (realDataTable[i].Length == 0)
+                    break;
+                
+                int rowMax = realDataTable[0].Length > realDataTable[i].Length ? realDataTable[i].Length : realDataTable[0].Length;
+                if (rowMax < 4 || rowMax == 0)
+                    continue;
+               
+                funcs[i-1] = Fit.Polynomial(realDataTable[0].Take(rowMax).ToArray(), realDataTable[i].Take(rowMax).ToArray(), p);
+
+            }
+
+            foreach (double[] i in funcs)
+            {
+                if (i == null)
+                    continue;
+                foreach (double j in i)
+                    box.Text += j + " ";
+                box.Text += "\r\n ";
+            }
         }
     }
 }

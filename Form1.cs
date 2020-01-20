@@ -24,6 +24,7 @@ namespace Graphs
         private void exportButton_Click(object sender, EventArgs e)
         {
             DataProcessing.parseTable(inputTable, indicator);
+            //DataProcessing.graphPoints(indicator);
         }
         private void clearButton_Click(object sender, EventArgs e)
         {
