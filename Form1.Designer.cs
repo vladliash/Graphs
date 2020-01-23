@@ -38,6 +38,8 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.exportButton = new System.Windows.Forms.ToolStripButton();
             this.exportDirButton = new System.Windows.Forms.ToolStripButton();
@@ -53,13 +55,13 @@
             this.efficiencyFull = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efficiencyStatic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.indicator = new System.Windows.Forms.TextBox();
+            this.chartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.toolStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTable)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPressure)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -146,8 +148,8 @@
             this.inputTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.inputTable.Size = new System.Drawing.Size(366, 573);
             this.inputTable.TabIndex = 0;
-            this.inputTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTable_KeyDown);
             this.inputTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.inputTable_CellValueChanged);
+            this.inputTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTable_KeyDown);
             // 
             // airFlow
             // 
@@ -216,8 +218,8 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.chart1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.indicator, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.chartPressure, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(375, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -235,22 +237,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 573);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(352, 185);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
-            // 
             // indicator
             // 
             this.indicator.AcceptsReturn = true;
@@ -260,6 +246,66 @@
             this.indicator.Name = "indicator";
             this.indicator.Size = new System.Drawing.Size(352, 145);
             this.indicator.TabIndex = 4;
+            // 
+            // chartPressure
+            // 
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
+            chartArea1.AlignWithChartArea = "ChartArea1";
+            chartArea1.AxisX.Crossing = -1.7976931348623157E+308D;
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisX.IsStartedFromZero = false;
+            chartArea1.AxisX.LabelStyle.Format = "#,\"000\"";
+            chartArea1.AxisX.LabelStyle.Interval = 0D;
+            chartArea1.AxisX.LabelStyle.IntervalOffset = 0D;
+            chartArea1.AxisX.LabelStyle.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisX.LabelStyle.TruncatedLabels = true;
+            chartArea1.AxisX.MajorGrid.Interval = 0D;
+            chartArea1.AxisX.MajorGrid.IntervalOffset = 0D;
+            chartArea1.AxisX.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisX.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Straight;
+            chartArea1.AxisX.ScaleBreakStyle.Enabled = true;
+            chartArea1.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisX.ScaleView.Zoomable = false;
+            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.IsSameFontSizeForAllAxes = true;
+            chartArea1.Name = "ChartArea1";
+            this.chartPressure.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend1";
+            this.chartPressure.Legends.Add(legend1);
+            this.chartPressure.Location = new System.Drawing.Point(3, 3);
+            this.chartPressure.Name = "chartPressure";
+            series1.BorderColor = System.Drawing.Color.Black;
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Black;
+            series1.CustomProperties = "EmptyPointValue=Zero";
+            series1.Legend = "Legend1";
+            series1.Name = "Полное давление";
+            series2.BorderColor = System.Drawing.Color.Black;
+            series2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Black;
+            series2.Legend = "Legend1";
+            series2.Name = "Статическое давление";
+            this.chartPressure.Series.Add(series1);
+            this.chartPressure.Series.Add(series2);
+            this.chartPressure.Size = new System.Drawing.Size(352, 185);
+            this.chartPressure.TabIndex = 5;
+            this.chartPressure.Text = "chart1";
+            title1.Name = "Title1";
+            title1.Text = "Давление";
+            this.chartPressure.Titles.Add(title1);
             // 
             // Form1
             // 
@@ -277,7 +323,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.inputTable)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPressure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,7 +340,6 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripButton clearButton;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataGridViewTextBoxColumn airFlow;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullPressure;
         private System.Windows.Forms.DataGridViewTextBoxColumn staticPressure;
@@ -302,6 +347,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyFull;
         private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyStatic;
         private System.Windows.Forms.TextBox indicator;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPressure;
     }
 }
 

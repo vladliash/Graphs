@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Graphs
 {
@@ -13,9 +14,9 @@ namespace Graphs
     static class DataProcessing
     {
         static double[][] dataTable;
-        static double[][] realDataTable;
-        static double[][][] points;
-
+        public static double[][] realDataTable;
+        public static double[][][] points;
+        
         /*
          * Parses data from clipboard to dataTable
          */
@@ -119,7 +120,7 @@ namespace Graphs
                 return;
             // Порядок полиномальной функции
             int p = 3;
-            int pNum = 10;
+            int pNum = 7;
             double[][] funcs = new double[realDataTable.Length - 1][];
             double[][] range = new double[realDataTable.Length - 1][];
 
@@ -141,7 +142,7 @@ namespace Graphs
                 funcs[i-1] = Fit.Polynomial(realDataTable[0].Take(rowMax).ToArray(), realDataTable[i].Take(rowMax).ToArray(), p);
 
                 double minX = realDataTable[0][0];
-                double maxX = realDataTable[0][1];
+                double maxX = realDataTable[0][rowMax-1];
                 double increment = (maxX - minX) / (pNum - 1);
 
                 for (int j = 0; j < pNum; j++)
@@ -155,7 +156,7 @@ namespace Graphs
             }
 
             box.Clear();
-            foreach (double[] i in funcs)
+            foreach (double[] i in points[0])
             {
                 if (i == null)
                     continue;
@@ -165,6 +166,18 @@ namespace Graphs
             }
             box.Text += "\r\n" + funcs.Length;
 
+        }
+
+
+        static public void kek (ref DataPointCollection points, double[] xValues, double[] yValues)
+        {
+            if (xValues.Length == 0 || xValues.Length != yValues.Length)
+                return;
+            points.Clear();
+            for (int i = 0; i < xValues.Length; i++)
+            {
+                points.AddXY(xValues[i], yValues[i]);
+            }
         }
     }
 }
