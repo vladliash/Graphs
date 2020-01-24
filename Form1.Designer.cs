@@ -283,8 +283,10 @@
             chartArea1.IsSameFontSizeForAllAxes = true;
             chartArea1.Name = "ChartArea1";
             this.chartCoefficient.ChartAreas.Add(chartArea1);
+            legend1.DockedToChartArea = "ChartArea1";
             legend1.Enabled = false;
             legend1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend1.IsDockedInsideChartArea = false;
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chartCoefficient.Legends.Add(legend1);
@@ -356,8 +358,10 @@
             chartArea2.IsSameFontSizeForAllAxes = true;
             chartArea2.Name = "ChartArea1";
             this.chartPower.ChartAreas.Add(chartArea2);
+            legend2.DockedToChartArea = "ChartArea1";
             legend2.Enabled = false;
             legend2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend2.IsDockedInsideChartArea = false;
             legend2.IsTextAutoFit = false;
             legend2.Name = "Legend1";
             legend2.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -420,8 +424,10 @@
             chartArea3.IsSameFontSizeForAllAxes = true;
             chartArea3.Name = "ChartArea1";
             this.chartPressure.ChartAreas.Add(chartArea3);
+            legend3.DockedToChartArea = "ChartArea1";
             legend3.Enabled = false;
             legend3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend3.IsDockedInsideChartArea = false;
             legend3.IsTextAutoFit = false;
             legend3.Name = "Legend1";
             this.chartPressure.Legends.Add(legend3);
