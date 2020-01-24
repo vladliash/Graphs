@@ -125,11 +125,20 @@ namespace Graphs
         void changeChart(Chart chart,string title)
         {
             tableLayoutPanel1.Controls.Remove(chart);
-            chart.Height = 500;
-            chart.Width = 500;
+            chart.Height = 300;
+            chart.Width = 600;
+            chart.Legends[0].Enabled = true;
+            chart.ChartAreas[0].Position.Width = 63;
+            chart.ChartAreas[0].InnerPlotPosition.X = 15;
+            double max = chart.ChartAreas[0].AxisX.Maximum;
+            double interval = chart.ChartAreas[0].AxisX.MajorGrid.Interval;
+            chart.ChartAreas[0].AxisX.Maximum = ((int)(max / interval)+1) * interval;
+            //chart.Legends[0].Position.Y = chart.ChartAreas[0].InnerPlotPosition.Y;
 
-            chart.SaveImage(title + ".png", ChartImageFormat.Png);
-
+            chart.SaveImage(title + ".Bmp", ChartImageFormat.Bmp);
+            chart.Legends[0].Enabled = false;
+            chart.ChartAreas[0].Position.Auto = true;
+            chart.ChartAreas[0].InnerPlotPosition.Auto = true;
             tableLayoutPanel1.Controls.Add(chart);
         }
     }

@@ -41,7 +41,10 @@ namespace Graphs
                     bool isit = double.TryParse(row[j].Replace('.',','), out dub);
                     if (isit)
                     {
-                        dataTable[j][i] = dub;
+                        if (j == 4 || j == 5)
+                            dataTable[j][i] = dub * 100;
+                        else
+                            dataTable[j][i] = dub;
                     }
                 }
             }
