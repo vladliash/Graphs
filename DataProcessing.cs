@@ -16,6 +16,8 @@ namespace Graphs
         static double[][] dataTable;
         public static double[][] realDataTable;
         public static double[][][] points;
+        public static double[] workPoints;
+        public static double Q = 0;
         
         /*
          * Parses data from clipboard to dataTable
@@ -76,7 +78,7 @@ namespace Graphs
         /*
          * Creates an array from DataGridView table data.
          */
-        static public void parseTable(DataGridView table, TextBox box)
+        static public void parseTable(DataGridView table)
         {
             realDataTable = new double[table.ColumnCount][];
             for (int i = 0; i < realDataTable.Length; i++)
@@ -102,27 +104,19 @@ namespace Graphs
             }
             for (int i = 0; i < realDataTable.Length; i++)
                 realDataTable[i] = realDataTable[i].TakeWhile(x => x != 0).ToArray();
-
-            /*box.Clear();
-            foreach(double[] i in realDataTable)
-            {
-                foreach (double j in i)
-                    box.Text += j + " ";
-                box.Text += "\r\n";
-            }*/
         }
         /*
          * Approximates, cuts realDataArray, creates points array for drawing graphs
          */
-        static public void graphPoints(TextBox box)
+        static public void graphPoints()
         {
             if (realDataTable[0].Length == 0)
                 return;
             // Порядок полиномальной функции
             int p = 3;
-            int pNum = 7;
+            int pNum = 10 ;
             double[][] funcs = new double[realDataTable.Length - 1][];
-            double[][] range = new double[realDataTable.Length - 1][];
+            workPoints = new double[realDataTable.Length - 1];
 
             points = new double[realDataTable.Length - 1][][];
             for (int i = 0; i < points.Length; i++)
@@ -153,21 +147,11 @@ namespace Graphs
                     for (int z = 0; z <= p; z++)
                         points[i-1][1][j] += (funcs[i - 1][z]) * (Math.Pow(x, z));
                 }
-            }
 
-            box.Clear();
-            foreach (double[] i in points[0])
-            {
-                if (i == null)
-                    continue;
-                foreach (double j in i)
-                    box.Text += j + " ";
-                box.Text += "\r\n ";
+                for (int z = 0; z <= p; z++)
+                    workPoints[i-1] += (funcs[i - 1][z]) * (Math.Pow(Q, z));
             }
-            box.Text += "\r\n" + funcs.Length;
-
         }
-
 
         static public void kek (ref DataPointCollection points, double[] xValues, double[] yValues)
         {
@@ -179,5 +163,7 @@ namespace Graphs
                 points.AddXY(xValues[i], yValues[i]);
             }
         }
+
+
     }
 }
