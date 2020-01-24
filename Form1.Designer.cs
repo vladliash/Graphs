@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.exportButton = new System.Windows.Forms.ToolStripButton();
             this.exportDirButton = new System.Windows.Forms.ToolStripButton();
@@ -48,15 +48,15 @@
             this.inputLabel = new System.Windows.Forms.ToolStripLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.inputTable = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.indicator = new System.Windows.Forms.TextBox();
+            this.chartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.airFlow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staticPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.power = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efficiencyFull = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efficiencyStatic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.indicator = new System.Windows.Forms.TextBox();
-            this.chartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.toolStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTable)).BeginInit();
@@ -151,66 +151,6 @@
             this.inputTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.inputTable_CellValueChanged);
             this.inputTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTable_KeyDown);
             // 
-            // airFlow
-            // 
-            this.airFlow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.airFlow.DefaultCellStyle = dataGridViewCellStyle1;
-            this.airFlow.HeaderText = "Q, м3";
-            this.airFlow.Name = "airFlow";
-            this.airFlow.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.airFlow.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // fullPressure
-            // 
-            this.fullPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.fullPressure.DefaultCellStyle = dataGridViewCellStyle2;
-            this.fullPressure.HeaderText = "pv, МПа";
-            this.fullPressure.Name = "fullPressure";
-            this.fullPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fullPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // staticPressure
-            // 
-            this.staticPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.staticPressure.DefaultCellStyle = dataGridViewCellStyle3;
-            this.staticPressure.HeaderText = "ps, МПа";
-            this.staticPressure.Name = "staticPressure";
-            this.staticPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.staticPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // power
-            // 
-            this.power.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.power.DefaultCellStyle = dataGridViewCellStyle4;
-            this.power.HeaderText = "N, кВт";
-            this.power.Name = "power";
-            this.power.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.power.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // efficiencyFull
-            // 
-            this.efficiencyFull.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.efficiencyFull.DefaultCellStyle = dataGridViewCellStyle5;
-            this.efficiencyFull.HeaderText = "Ev";
-            this.efficiencyFull.Name = "efficiencyFull";
-            this.efficiencyFull.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.efficiencyFull.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // efficiencyStatic
-            // 
-            this.efficiencyStatic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.efficiencyStatic.DefaultCellStyle = dataGridViewCellStyle6;
-            this.efficiencyStatic.HeaderText = "Es";
-            this.efficiencyStatic.Name = "efficiencyStatic";
-            this.efficiencyStatic.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.efficiencyStatic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -253,26 +193,14 @@
             chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
             chartArea1.AlignWithChartArea = "ChartArea1";
             chartArea1.AxisX.Crossing = -1.7976931348623157E+308D;
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisX.IsStartedFromZero = false;
-            chartArea1.AxisX.LabelStyle.Format = "#,\"000\"";
-            chartArea1.AxisX.LabelStyle.Interval = 0D;
-            chartArea1.AxisX.LabelStyle.IntervalOffset = 0D;
-            chartArea1.AxisX.LabelStyle.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisX.LabelStyle.TruncatedLabels = true;
-            chartArea1.AxisX.MajorGrid.Interval = 0D;
-            chartArea1.AxisX.MajorGrid.IntervalOffset = 0D;
-            chartArea1.AxisX.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisX.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Straight;
-            chartArea1.AxisX.ScaleBreakStyle.Enabled = true;
+            chartArea1.AxisX.Minimum = 0D;
             chartArea1.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea1.AxisX.ScaleView.Zoomable = false;
-            chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea1.AxisX.Title = "Q, м³";
+            chartArea1.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea1.AxisY.Title = "P, МПа";
+            chartArea1.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
             chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea1.IsSameFontSizeForAllAxes = true;
             chartArea1.Name = "ChartArea1";
@@ -307,6 +235,72 @@
             title1.Text = "Давление";
             this.chartPressure.Titles.Add(title1);
             // 
+            // airFlow
+            // 
+            this.airFlow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.airFlow.DefaultCellStyle = dataGridViewCellStyle1;
+            this.airFlow.HeaderText = "Q, м³";
+            this.airFlow.Name = "airFlow";
+            this.airFlow.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.airFlow.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.airFlow.ToolTipText = "Расход воздуха";
+            // 
+            // fullPressure
+            // 
+            this.fullPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.fullPressure.DefaultCellStyle = dataGridViewCellStyle2;
+            this.fullPressure.HeaderText = "Pv, МПа";
+            this.fullPressure.Name = "fullPressure";
+            this.fullPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fullPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fullPressure.ToolTipText = "Полное давление";
+            // 
+            // staticPressure
+            // 
+            this.staticPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.staticPressure.DefaultCellStyle = dataGridViewCellStyle3;
+            this.staticPressure.HeaderText = "Ps, МПа";
+            this.staticPressure.Name = "staticPressure";
+            this.staticPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.staticPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.staticPressure.ToolTipText = "Статическое давление";
+            // 
+            // power
+            // 
+            this.power.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.power.DefaultCellStyle = dataGridViewCellStyle4;
+            this.power.HeaderText = "N, кВт";
+            this.power.Name = "power";
+            this.power.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.power.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.power.ToolTipText = "Мощность";
+            // 
+            // efficiencyFull
+            // 
+            this.efficiencyFull.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.efficiencyFull.DefaultCellStyle = dataGridViewCellStyle5;
+            this.efficiencyFull.HeaderText = "ηv";
+            this.efficiencyFull.Name = "efficiencyFull";
+            this.efficiencyFull.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.efficiencyFull.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.efficiencyFull.ToolTipText = "Полный КПД";
+            // 
+            // efficiencyStatic
+            // 
+            this.efficiencyStatic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.efficiencyStatic.DefaultCellStyle = dataGridViewCellStyle6;
+            this.efficiencyStatic.HeaderText = "ηs";
+            this.efficiencyStatic.Name = "efficiencyStatic";
+            this.efficiencyStatic.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.efficiencyStatic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.efficiencyStatic.ToolTipText = "Статический КПД";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,14 +334,14 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripButton clearButton;
+        private System.Windows.Forms.TextBox indicator;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPressure;
         private System.Windows.Forms.DataGridViewTextBoxColumn airFlow;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullPressure;
         private System.Windows.Forms.DataGridViewTextBoxColumn staticPressure;
         private System.Windows.Forms.DataGridViewTextBoxColumn power;
         private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyFull;
         private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyStatic;
-        private System.Windows.Forms.TextBox indicator;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartPressure;
     }
 }
 

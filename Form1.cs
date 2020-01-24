@@ -17,12 +17,11 @@ namespace Graphs
 
     public partial class Form1 : Form
     {
-        int i = 0;
+
         public Form1()
         {
             InitializeComponent();
             inputTable.Rows.Add(24);
-            
         }
         private void exportButton_Click(object sender, EventArgs e)
         {
