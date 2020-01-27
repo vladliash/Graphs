@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
+using System.IO;
+using System.Reflection;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -25,6 +19,8 @@ namespace Graphs
             InitializeComponent();
             inputTable.Rows.Add(24);
         }
+
+
         private void exportButton_Click(object sender, EventArgs e)
         {
             Thread kek = new Thread(new ThreadStart(ChangeTitle));

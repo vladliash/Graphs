@@ -1,10 +1,7 @@
 ﻿
 using MathNet.Numerics;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -75,7 +72,6 @@ namespace Graphs
                     if (j + firstRow >= table.RowCount)
                         table.Rows.Add();
                     table[i + firstCol, j + firstRow].Value = dataTable[i][j];
-
                 }
             }
         }
@@ -130,7 +126,6 @@ namespace Graphs
                 points[i][0] = new double[pNum];
                 points[i][1] = new double[pNum];
             }
-                
 
             for (int i = 1; i < realDataTable.Length; i++)
             {
@@ -168,7 +163,5 @@ namespace Graphs
                 points.AddXY(xValues[i], yValues[i]);
             }
         }
-
-
     }
 }
