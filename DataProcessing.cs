@@ -10,15 +10,33 @@ namespace Graphs
 
     static class DataProcessing
     {
-        static double[][] dataTable;
-        public static double[][] realDataTable;
-        public static double[][][] points;
-        public static double[] workPoints;
+        /// <summary>
+        /// Air flow at the operating point
+        /// </summary>
         public static double Q = 0;
+        /// <summary>
+        /// Uncut array of formatted input data
+        /// </summary>
+        private static double[][] dataTable;
+
+        /// <summary>
+        /// Cut array of formatted input data
+        /// </summary>
+        private static double[][] realDataTable;
+
+        /// <summary>
+        /// Array of points of lines, approximated from realDataPoints
+        /// </summary>
+        public static double[][][] points;
+
+        /// <summary>
+        /// Values of certain parameters for given Q(Air flow) at the operating point
+        /// </summary>
+        public static double[] workPoints;
         
-        /*
-         * Parses data from clipboard to dataTable
-         */
+        /// <summary>
+        /// Parces data from Clipboard into <see cref="dataTable"/>
+        /// </summary>
         static public void pasteData()
         {
             char[] rowSplitter = { '\r', '\n' };
@@ -48,9 +66,11 @@ namespace Graphs
                 }
             }
         }
-        /*
-         * Fills given table with data from dataTable
-         */
+
+        /// <summary>
+        /// Fills given <see cref="DataGridView"/> table from <see cref="dataTable"/>
+        /// </summary>
+        /// <param name="table">Given <see cref="DataGridView"/> table</param>
         static public void fillTable(DataGridView table)
         {
             if (dataTable == null)
@@ -76,9 +96,11 @@ namespace Graphs
             }
         }
 
-        /*
-         * Creates an array from DataGridView table data.
-         */
+        
+        /// <summary>
+        /// Parces data from a <see cref="DataGridView"/> table into <see cref="realDataTable"/>
+        /// </summary>
+        /// <param name="table">Given <see cref="DataGridView"/> table</param>
         static public void parseTable(DataGridView table)
         {
             realDataTable = new double[table.ColumnCount][];
@@ -106,16 +128,17 @@ namespace Graphs
             for (int i = 0; i < realDataTable.Length; i++)
                 realDataTable[i] = realDataTable[i].TakeWhile(x => x != 0).ToArray();
         }
-        /*
-         * Approximates, cuts realDataArray, creates points array for drawing graphs
-         */
-        static public void graphPoints()
+
+        /// <summary>
+        /// Updates array of @<see cref="points"/> and @<see cref="workPoints"/> by with points of lines, 
+        /// which are approximated /// from @<see cref="realDataTable"/> data
+        /// </summary>
+        /// <param name="p">Degerre of polynom defining approximation line </param>
+        /// <param name="pNum">Number of points taken from each line</param>
+        static public void graphPoints(int p, int pNum)
         {
             if (realDataTable[0].Length == 0)
                 return;
-            // Порядок полиномальной функции
-            int p = 3;
-            int pNum = 10 ;
             double[][] funcs = new double[realDataTable.Length - 1][];
             workPoints = new double[realDataTable.Length - 1];
 
@@ -153,7 +176,13 @@ namespace Graphs
             }
         }
 
-        static public void kek (ref DataPointCollection points, double[] xValues, double[] yValues)
+        /// <summary>
+        /// Clears given collection of points and fills it with new points from given arrays of x Values and y values
+        /// </summary>
+        /// <param name="points">Current collection of points</param>
+        /// <param name="xValues">x values of new points</param>
+        /// <param name="yValues">y values of new points</param>
+        static public void pointsUpdate (ref DataPointCollection points, double[] xValues, double[] yValues)
         {
             if (xValues.Length == 0 || xValues.Length != yValues.Length)
                 return;

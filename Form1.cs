@@ -28,9 +28,9 @@ namespace Graphs
 
             void ChangeTitle()
             {
-                Invoke(new Change(changeChart), chartPressure, "График давления");
-                Invoke(new Change(changeChart), chartPower, "График мощности");
-                Invoke(new Change(changeChart), chartCoefficient, "График КПД");
+                Invoke(new Change(writeChart), chartPressure, "График давления");
+                Invoke(new Change(writeChart), chartPower, "График мощности");
+                Invoke(new Change(writeChart), chartCoefficient, "График КПД");
             }
         }
 
@@ -38,6 +38,7 @@ namespace Graphs
         {
             inputTable.Rows.Clear();
             inputTable.Rows.Add(24);
+            toolStripTextBox1.Clear();
             foreach (Series i in chartPressure.Series)
                 i.Points.Clear();
             foreach (Series i in chartPower.Series)
@@ -66,7 +67,7 @@ namespace Graphs
         private void inputTable_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             DataProcessing.parseTable(inputTable);
-            DataProcessing.graphPoints();
+            DataProcessing.graphPoints(3,10);
             updateGraphs();
         }
 
@@ -77,19 +78,22 @@ namespace Graphs
             if (isit)
             {
                 DataProcessing.Q = dub;
-                DataProcessing.graphPoints();
+                DataProcessing.graphPoints( 3, 10);
                 updateGraphs();
             }
         }
 
+        /// <summary>
+        /// Updates points of all charts, refreshes intervals of the graph
+        /// </summary>
         void updateGraphs()
         {
             try
             {
                 DataPointCollection points = chartPressure.Series[0].Points;
                 DataPointCollection points2 = chartPressure.Series[1].Points;
-                DataProcessing.kek(ref points, DataProcessing.points[0][0], DataProcessing.points[0][1]);
-                DataProcessing.kek(ref points2, DataProcessing.points[1][0], DataProcessing.points[1][1]);
+                DataProcessing.pointsUpdate(ref points, DataProcessing.points[0][0], DataProcessing.points[0][1]);
+                DataProcessing.pointsUpdate(ref points2, DataProcessing.points[1][0], DataProcessing.points[1][1]);
                 chartPressure.Series[2].Points.Clear();
                 chartPressure.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[0]);
                 chartPressure.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[1]);
@@ -99,7 +103,7 @@ namespace Graphs
                 chartPressure.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
 
                 DataPointCollection points3 = chartPower.Series[0].Points;
-                DataProcessing.kek(ref points3, DataProcessing.points[2][0], DataProcessing.points[2][1]);
+                DataProcessing.pointsUpdate(ref points3, DataProcessing.points[2][0], DataProcessing.points[2][1]);
                 chartPower.Series[1].Points.Clear();
                 chartPower.Series[1].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[2]);
 
@@ -109,8 +113,8 @@ namespace Graphs
 
                 DataPointCollection points4 = chartCoefficient.Series[0].Points;
                 DataPointCollection points5 = chartCoefficient.Series[1].Points;
-                DataProcessing.kek(ref points4, DataProcessing.points[3][0], DataProcessing.points[3][1]);
-                DataProcessing.kek(ref points5, DataProcessing.points[4][0], DataProcessing.points[4][1]);
+                DataProcessing.pointsUpdate(ref points4, DataProcessing.points[3][0], DataProcessing.points[3][1]);
+                DataProcessing.pointsUpdate(ref points5, DataProcessing.points[4][0], DataProcessing.points[4][1]);
                 chartCoefficient.Series[2].Points.Clear();
                 chartCoefficient.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[3]);
                 chartCoefficient.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[4]);
@@ -131,7 +135,12 @@ namespace Graphs
             }
         }
 
-        void changeChart(Chart chart,string title)
+        /// <summary>
+        /// Exports specifically edited graph as .bmp image into the root directory
+        /// </summary>
+        /// <param name="chart"><see cref="Chart"/> to be edited </param>
+        /// <param name="title">Name of the image file in the operating system</param>
+        void writeChart(Chart chart,string title)
         {
             tableLayoutPanel1.Controls.Remove(chart);
             chart.Height = 300;
