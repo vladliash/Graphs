@@ -26,6 +26,8 @@ namespace Graphs
         {
             char[] rowSplitter = { '\r', '\n' };
             string[] rows = Clipboard.GetText().Split(rowSplitter,StringSplitOptions.RemoveEmptyEntries);
+            if (rows.Length == 0)
+                return;
             int colNum = (rows[0].Split('\t')).Length;
 
             dataTable = new double[colNum][];
@@ -41,7 +43,7 @@ namespace Graphs
                     bool isit = double.TryParse(row[j].Replace('.',','), out dub);
                     if (isit)
                     {
-                        if (j == 4 || j == 5)
+                        if (j == 4 || j == 5 || dub < 1)
                             dataTable[j][i] = dub * 100;
                         else
                             dataTable[j][i] = dub;

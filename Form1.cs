@@ -98,10 +98,18 @@ namespace Graphs
                 chartPressure.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[0]);
                 chartPressure.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[1]);
 
+                chartPressure.ChartAreas[0].AxisX.Maximum = Double.NaN;
+                chartPressure.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
+                chartPressure.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
+
                 DataPointCollection points3 = chartPower.Series[0].Points;
                 DataProcessing.kek(ref points3, DataProcessing.points[2][0], DataProcessing.points[2][1]);
                 chartPower.Series[1].Points.Clear();
                 chartPower.Series[1].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[2]);
+
+                chartPower.ChartAreas[0].AxisX.Maximum = Double.NaN;
+                chartPower.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
+                chartPower.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
 
                 DataPointCollection points4 = chartCoefficient.Series[0].Points;
                 DataPointCollection points5 = chartCoefficient.Series[1].Points;
@@ -110,6 +118,11 @@ namespace Graphs
                 chartCoefficient.Series[2].Points.Clear();
                 chartCoefficient.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[3]);
                 chartCoefficient.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[4]);
+
+                chartCoefficient.ChartAreas[0].AxisX.Maximum = Double.NaN;
+                chartCoefficient.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
+                chartCoefficient.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
+
 
 
             } catch (System.ArgumentOutOfRangeException)
@@ -131,11 +144,16 @@ namespace Graphs
             chart.ChartAreas[0].Position.Width = 63;
             chart.ChartAreas[0].InnerPlotPosition.X = 15;
             double max = chart.ChartAreas[0].AxisX.Maximum;
-            double interval = chart.ChartAreas[0].AxisX.MajorGrid.Interval;
-            chart.ChartAreas[0].AxisX.Maximum = ((int)(max / interval)+1) * interval;
-            //chart.Legends[0].Position.Y = chart.ChartAreas[0].InnerPlotPosition.Y;
+            double intervalX = chart.ChartAreas[0].AxisX.MajorGrid.Interval;
+            double intervalY = chart.ChartAreas[0].AxisY.MajorGrid.Interval;
+            chart.ChartAreas[0].AxisX.Maximum = ((int)(max / intervalX)+1) * intervalX;
+            chart.ChartAreas[0].AxisX.MinorGrid.Interval = intervalX / 5;
+            chart.ChartAreas[0].AxisY.MinorGrid.Interval = intervalY / 5;
 
             chart.SaveImage(title + ".Bmp", ChartImageFormat.Bmp);
+            chart.ChartAreas[0].AxisX.Maximum = Double.NaN;
+            chart.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
+            chart.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
             chart.Legends[0].Enabled = false;
             chart.ChartAreas[0].Position.Auto = true;
             chart.ChartAreas[0].InnerPlotPosition.Auto = true;
