@@ -90,6 +90,8 @@ namespace Graphs
         {
             try
             {
+                chartPressure.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
+                chartPressure.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
                 DataPointCollection points = chartPressure.Series[0].Points;
                 DataPointCollection points2 = chartPressure.Series[1].Points;
                 DataProcessing.pointsUpdate(ref points, DataProcessing.points[0][0], DataProcessing.points[0][1]);
@@ -97,20 +99,38 @@ namespace Graphs
                 chartPressure.Series[2].Points.Clear();
                 chartPressure.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[0]);
                 chartPressure.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[1]);
+                double min = Math.Min(DataProcessing.points[0][0][0], DataProcessing.points[1][0][0]);
+                double max = Math.Max(DataProcessing.points[0][0][DataProcessing.points[0][0].Length - 1], DataProcessing.points[1][0][DataProcessing.points[0][0].Length - 1]);
+                double margin = (max - min) * 0.2;
+                min = min - margin;
+                max = max + margin;
+                int degree = ((int)((max - min) / 5)).ToString().Length - 1;
+                double interval = Math.Round(((max - min) / 5) / Math.Pow(10, degree), MidpointRounding.AwayFromZero) * Math.Pow(10, degree);
+                min = ((int)(min / interval)) * interval;
+                chartPressure.ChartAreas[0].AxisX.Interval = interval;
+                chartPressure.ChartAreas[0].AxisX.Minimum = min;
+                chartPressure.ChartAreas[0].AxisX.Maximum = ((int) ((max - min)/interval)+1)*(interval) + min;
 
-                chartPressure.ChartAreas[0].AxisX.Maximum = Double.NaN;
-                chartPressure.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
-                chartPressure.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
-
+                chartPower.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
+                chartPower.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
                 DataPointCollection points3 = chartPower.Series[0].Points;
                 DataProcessing.pointsUpdate(ref points3, DataProcessing.points[2][0], DataProcessing.points[2][1]);
                 chartPower.Series[1].Points.Clear();
                 chartPower.Series[1].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[2]);
+                min = DataProcessing.points[2][0][0];
+                max = DataProcessing.points[2][0][DataProcessing.points[2][0].Length - 1];
+                margin = (max - min) * 0.2;
+                min = min - margin;
+                max = max + margin;
+                degree = ((int)((max - min) / 5)).ToString().Length - 1;
+                interval = Math.Round(((max - min) / 5) / Math.Pow(10, degree), MidpointRounding.AwayFromZero) * Math.Pow(10, degree);
+                min = ((int)(min / interval)) * interval;
+                chartPower.ChartAreas[0].AxisX.Interval = interval;
+                chartPower.ChartAreas[0].AxisX.Minimum = min;
+                chartPower.ChartAreas[0].AxisX.Maximum = ((int)((max - min) / interval) + 1) * (interval) + min;
 
-                chartPower.ChartAreas[0].AxisX.Maximum = Double.NaN;
-                chartPower.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
-                chartPower.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
-
+                chartCoefficient.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
+                chartCoefficient.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
                 DataPointCollection points4 = chartCoefficient.Series[0].Points;
                 DataPointCollection points5 = chartCoefficient.Series[1].Points;
                 DataProcessing.pointsUpdate(ref points4, DataProcessing.points[3][0], DataProcessing.points[3][1]);
@@ -118,10 +138,17 @@ namespace Graphs
                 chartCoefficient.Series[2].Points.Clear();
                 chartCoefficient.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[3]);
                 chartCoefficient.Series[2].Points.AddXY(DataProcessing.Q, DataProcessing.workPoints[4]);
-
-                chartCoefficient.ChartAreas[0].AxisX.Maximum = Double.NaN;
-                chartCoefficient.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
-                chartCoefficient.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
+                min = Math.Min(DataProcessing.points[3][0][0], DataProcessing.points[4][0][0]);
+                max = Math.Max(DataProcessing.points[3][0][DataProcessing.points[3][0].Length - 1], DataProcessing.points[4][0][DataProcessing.points[4][0].Length - 1]);
+                margin = (max - min) * 0.2;
+                min = min - margin;
+                max = max + margin;
+                degree = ((int)((max - min) / 5)).ToString().Length - 1;
+                interval = Math.Round(((max - min) / 5) / Math.Pow(10, degree), MidpointRounding.AwayFromZero) * Math.Pow(10, degree);
+                min = ((int)(min / interval)) * interval;
+                chartCoefficient.ChartAreas[0].AxisX.Interval = interval;
+                chartCoefficient.ChartAreas[0].AxisX.Minimum = min;
+                chartCoefficient.ChartAreas[0].AxisX.Maximum = ((int)((max - min) / interval) + 1) * (interval) + min;
 
 
 
@@ -148,15 +175,13 @@ namespace Graphs
             chart.Legends[0].Enabled = true;
             chart.ChartAreas[0].Position.Width = 63;
             chart.ChartAreas[0].InnerPlotPosition.X = 15;
-            double max = chart.ChartAreas[0].AxisX.Maximum;
             double intervalX = chart.ChartAreas[0].AxisX.MajorGrid.Interval;
             double intervalY = chart.ChartAreas[0].AxisY.MajorGrid.Interval;
-            chart.ChartAreas[0].AxisX.Maximum = ((int)(max / intervalX)+1) * intervalX;
             chart.ChartAreas[0].AxisX.MinorGrid.Interval = intervalX / 5;
             chart.ChartAreas[0].AxisY.MinorGrid.Interval = intervalY / 5;
 
             chart.SaveImage(title + ".Bmp", ChartImageFormat.Bmp);
-            chart.ChartAreas[0].AxisX.Maximum = Double.NaN;
+
             chart.ChartAreas[0].AxisX.MinorGrid.Interval = Double.NaN;
             chart.ChartAreas[0].AxisY.MinorGrid.Interval = Double.NaN;
             chart.Legends[0].Enabled = false;

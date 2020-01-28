@@ -349,9 +349,9 @@
             chartArea2.AxisX2.IsLabelAutoFit = false;
             chartArea2.AxisY.Crossing = -1.7976931348623157E+308D;
             chartArea2.AxisY.IsLabelAutoFit = false;
+            chartArea2.AxisY.IsStartedFromZero = false;
             chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea2.AxisY.Minimum = 0D;
             chartArea2.AxisY.MinorGrid.Enabled = true;
             chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea2.AxisY.Title = "N, кВт";
@@ -401,12 +401,12 @@
             chartArea3.AlignWithChartArea = "ChartArea1";
             chartArea3.AxisX.Crossing = -1.7976931348623157E+308D;
             chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.AxisX.IsStartedFromZero = false;
             chartArea3.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30)));
             chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea3.AxisX.Minimum = 0D;
             chartArea3.AxisX.MinorGrid.Enabled = true;
             chartArea3.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea3.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
@@ -416,9 +416,9 @@
             chartArea3.AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea3.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
             chartArea3.AxisY.IsLabelAutoFit = false;
+            chartArea3.AxisY.IsStartedFromZero = false;
             chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea3.AxisY.Minimum = 0D;
             chartArea3.AxisY.MinorGrid.Enabled = true;
             chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
             chartArea3.AxisY.Title = "P, МПа";

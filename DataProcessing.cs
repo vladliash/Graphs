@@ -89,7 +89,7 @@ namespace Graphs
                     return;
                 for (int j = 0; j < dataTable[0].Length; j++)
                 {
-                    if (j + firstRow >= table.RowCount)
+                    if (j + firstRow +1 >= table.RowCount)
                         table.Rows.Add();
                     table[i + firstCol, j + firstRow].Value = dataTable[i][j];
                 }
