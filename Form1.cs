@@ -1,9 +1,8 @@
 ﻿using System;
-using System.IO;
-using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using CheckBox = System.Windows.Forms.CheckBox;
 
 namespace Graphs
 {
@@ -187,6 +186,24 @@ namespace Graphs
             chart.ChartAreas[0].Position.Auto = true;
             chart.ChartAreas[0].InnerPlotPosition.Auto = true;
             tableLayoutPanel1.Controls.Add(chart);
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
+        {
+            CheckBox checkbox = (CheckBox)sender;
+            if(checkbox.Checked == false)
+            {
+                chartPressure.Series[2].Enabled = false;
+                chartPower.Series[1].Enabled = false;
+                chartCoefficient.Series[2].Enabled = false;
+            }
+            else
+            {
+                chartPressure.Series[2].Enabled = true;
+                chartPower.Series[1].Enabled = true;
+                chartCoefficient.Series[2].Enabled = true;
+            }
+
         }
     }
 }
