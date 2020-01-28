@@ -150,8 +150,6 @@ namespace Graphs
                 chartCoefficient.ChartAreas[0].AxisX.Minimum = min;
                 chartCoefficient.ChartAreas[0].AxisX.Maximum = ((int)((max - min) / interval) + 1) * (interval) + min;
 
-
-
             } catch (System.ArgumentOutOfRangeException)
             {
                 return;
@@ -175,6 +173,7 @@ namespace Graphs
             chart.Legends[0].Enabled = true;
             chart.ChartAreas[0].Position.Width = 63;
             chart.ChartAreas[0].InnerPlotPosition.X = 15;
+            chart.ChartAreas[0].InnerPlotPosition.Width = 85;
             double intervalX = chart.ChartAreas[0].AxisX.MajorGrid.Interval;
             double intervalY = chart.ChartAreas[0].AxisY.MajorGrid.Interval;
             chart.ChartAreas[0].AxisX.MinorGrid.Interval = intervalX / 5;
