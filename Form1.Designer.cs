@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -46,12 +52,6 @@
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.exportButton = new System.Windows.Forms.ToolStripButton();
             this.clearButton = new System.Windows.Forms.ToolStripButton();
@@ -60,17 +60,17 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.inputTable = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chartCoefficient = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartPower = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.airFlow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staticPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.power = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efficiencyFull = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efficiencyStatic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.chartCoefficient = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartPower = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTable)).BeginInit();
@@ -126,8 +126,8 @@
             // 
             this.inputLabel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.inputLabel.Name = "inputLabel";
-            this.inputLabel.Size = new System.Drawing.Size(235, 22);
-            this.inputLabel.Text = "Полное давление в рабочей точке, МПа :";
+            this.inputLabel.Size = new System.Drawing.Size(203, 22);
+            this.inputLabel.Text = "Расход воздуха в рабочей точке, м³:";
             // 
             // toolStripSeparator1
             // 
@@ -164,6 +164,72 @@
             this.inputTable.TabIndex = 0;
             this.inputTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.inputTable_CellValueChanged);
             this.inputTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTable_KeyDown);
+            // 
+            // airFlow
+            // 
+            this.airFlow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.airFlow.DefaultCellStyle = dataGridViewCellStyle1;
+            this.airFlow.HeaderText = "Q, м³";
+            this.airFlow.Name = "airFlow";
+            this.airFlow.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.airFlow.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.airFlow.ToolTipText = "Расход воздуха";
+            // 
+            // fullPressure
+            // 
+            this.fullPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.fullPressure.DefaultCellStyle = dataGridViewCellStyle2;
+            this.fullPressure.HeaderText = "Pv, Па";
+            this.fullPressure.Name = "fullPressure";
+            this.fullPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fullPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fullPressure.ToolTipText = "Полное давление";
+            // 
+            // staticPressure
+            // 
+            this.staticPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.staticPressure.DefaultCellStyle = dataGridViewCellStyle3;
+            this.staticPressure.HeaderText = "Ps, Па";
+            this.staticPressure.Name = "staticPressure";
+            this.staticPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.staticPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.staticPressure.ToolTipText = "Статическое давление";
+            // 
+            // power
+            // 
+            this.power.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.power.DefaultCellStyle = dataGridViewCellStyle4;
+            this.power.HeaderText = "N, кВт";
+            this.power.Name = "power";
+            this.power.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.power.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.power.ToolTipText = "Мощность";
+            // 
+            // efficiencyFull
+            // 
+            this.efficiencyFull.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.efficiencyFull.DefaultCellStyle = dataGridViewCellStyle5;
+            this.efficiencyFull.HeaderText = "ηv";
+            this.efficiencyFull.Name = "efficiencyFull";
+            this.efficiencyFull.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.efficiencyFull.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.efficiencyFull.ToolTipText = "Полный КПД";
+            // 
+            // efficiencyStatic
+            // 
+            this.efficiencyStatic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.efficiencyStatic.DefaultCellStyle = dataGridViewCellStyle6;
+            this.efficiencyStatic.HeaderText = "ηs";
+            this.efficiencyStatic.Name = "efficiencyStatic";
+            this.efficiencyStatic.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.efficiencyStatic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.efficiencyStatic.ToolTipText = "Статический КПД";
             // 
             // tableLayoutPanel1
             // 
@@ -428,72 +494,6 @@
             this.checkBox1.Text = "Показать рабочую точку ";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckStateChanged += new System.EventHandler(this.checkBox1_CheckStateChanged);
-            // 
-            // airFlow
-            // 
-            this.airFlow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.airFlow.DefaultCellStyle = dataGridViewCellStyle1;
-            this.airFlow.HeaderText = "Q, м³";
-            this.airFlow.Name = "airFlow";
-            this.airFlow.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.airFlow.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.airFlow.ToolTipText = "Расход воздуха";
-            // 
-            // fullPressure
-            // 
-            this.fullPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.fullPressure.DefaultCellStyle = dataGridViewCellStyle2;
-            this.fullPressure.HeaderText = "Pv, Па";
-            this.fullPressure.Name = "fullPressure";
-            this.fullPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fullPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fullPressure.ToolTipText = "Полное давление";
-            // 
-            // staticPressure
-            // 
-            this.staticPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.staticPressure.DefaultCellStyle = dataGridViewCellStyle3;
-            this.staticPressure.HeaderText = "Ps, Па";
-            this.staticPressure.Name = "staticPressure";
-            this.staticPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.staticPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.staticPressure.ToolTipText = "Статическое давление";
-            // 
-            // power
-            // 
-            this.power.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.power.DefaultCellStyle = dataGridViewCellStyle4;
-            this.power.HeaderText = "N, кВт";
-            this.power.Name = "power";
-            this.power.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.power.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.power.ToolTipText = "Мощность";
-            // 
-            // efficiencyFull
-            // 
-            this.efficiencyFull.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.efficiencyFull.DefaultCellStyle = dataGridViewCellStyle5;
-            this.efficiencyFull.HeaderText = "ηv";
-            this.efficiencyFull.Name = "efficiencyFull";
-            this.efficiencyFull.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.efficiencyFull.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.efficiencyFull.ToolTipText = "Полный КПД";
-            // 
-            // efficiencyStatic
-            // 
-            this.efficiencyStatic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.efficiencyStatic.DefaultCellStyle = dataGridViewCellStyle6;
-            this.efficiencyStatic.HeaderText = "ηs";
-            this.efficiencyStatic.Name = "efficiencyStatic";
-            this.efficiencyStatic.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.efficiencyStatic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.efficiencyStatic.ToolTipText = "Статический КПД";
             // 
             // Form1
             // 
