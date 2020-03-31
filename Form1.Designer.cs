@@ -29,48 +29,48 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.exportButton = new System.Windows.Forms.ToolStripButton();
             this.clearButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.inputLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.inputTable = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.chartCoefficient = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartPower = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.airFlow = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staticPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.power = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efficiencyFull = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.efficiencyStatic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.chartCoefficient = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartPower = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputTable)).BeginInit();
@@ -117,6 +117,7 @@
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
@@ -127,6 +128,11 @@
             this.inputLabel.Name = "inputLabel";
             this.inputLabel.Size = new System.Drawing.Size(235, 22);
             this.inputLabel.Text = "Полное давление в рабочей точке, МПа :";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // flowLayoutPanel1
             // 
@@ -159,72 +165,6 @@
             this.inputTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.inputTable_CellValueChanged);
             this.inputTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputTable_KeyDown);
             // 
-            // airFlow
-            // 
-            this.airFlow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.airFlow.DefaultCellStyle = dataGridViewCellStyle13;
-            this.airFlow.HeaderText = "Q, м³";
-            this.airFlow.Name = "airFlow";
-            this.airFlow.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.airFlow.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.airFlow.ToolTipText = "Расход воздуха";
-            // 
-            // fullPressure
-            // 
-            this.fullPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.fullPressure.DefaultCellStyle = dataGridViewCellStyle14;
-            this.fullPressure.HeaderText = "Pv, МПа";
-            this.fullPressure.Name = "fullPressure";
-            this.fullPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fullPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fullPressure.ToolTipText = "Полное давление";
-            // 
-            // staticPressure
-            // 
-            this.staticPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.staticPressure.DefaultCellStyle = dataGridViewCellStyle15;
-            this.staticPressure.HeaderText = "Ps, МПа";
-            this.staticPressure.Name = "staticPressure";
-            this.staticPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.staticPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.staticPressure.ToolTipText = "Статическое давление";
-            // 
-            // power
-            // 
-            this.power.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.power.DefaultCellStyle = dataGridViewCellStyle16;
-            this.power.HeaderText = "N, кВт";
-            this.power.Name = "power";
-            this.power.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.power.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.power.ToolTipText = "Мощность";
-            // 
-            // efficiencyFull
-            // 
-            this.efficiencyFull.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.efficiencyFull.DefaultCellStyle = dataGridViewCellStyle17;
-            this.efficiencyFull.HeaderText = "ηv";
-            this.efficiencyFull.Name = "efficiencyFull";
-            this.efficiencyFull.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.efficiencyFull.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.efficiencyFull.ToolTipText = "Полный КПД";
-            // 
-            // efficiencyStatic
-            // 
-            this.efficiencyStatic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.efficiencyStatic.DefaultCellStyle = dataGridViewCellStyle18;
-            this.efficiencyStatic.HeaderText = "ηs";
-            this.efficiencyStatic.Name = "efficiencyStatic";
-            this.efficiencyStatic.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.efficiencyStatic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.efficiencyStatic.ToolTipText = "Статический КПД";
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -254,228 +194,223 @@
             // 
             // chartCoefficient
             // 
-            chartArea7.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea7.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
-            chartArea7.AlignWithChartArea = "ChartArea1";
-            chartArea7.AxisX.Crossing = -1.7976931348623157E+308D;
-            chartArea7.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea7.AxisX.IsLabelAutoFit = false;
-            chartArea7.AxisX.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea7.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea7.AxisX.Minimum = 0D;
-            chartArea7.AxisX.MinorGrid.Enabled = true;
-            chartArea7.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea7.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea7.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea7.AxisX.ScaleView.Zoomable = false;
-            chartArea7.AxisX.Title = "Q, м³";
-            chartArea7.AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea7.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea7.AxisY.Crossing = -1.7976931348623157E+308D;
-            chartArea7.AxisY.IsLabelAutoFit = false;
-            chartArea7.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea7.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea7.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Gray;
-            chartArea7.AxisY.Maximum = 100D;
-            chartArea7.AxisY.Minimum = 0D;
-            chartArea7.AxisY.MinorGrid.Enabled = true;
-            chartArea7.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea7.AxisY.Title = "η, %";
-            chartArea7.AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea7.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea7.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea7.IsSameFontSizeForAllAxes = true;
-            chartArea7.Name = "ChartArea1";
-            this.chartCoefficient.ChartAreas.Add(chartArea7);
-            legend7.DockedToChartArea = "ChartArea1";
-            legend7.Enabled = false;
-            legend7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend7.IsDockedInsideChartArea = false;
-            legend7.IsTextAutoFit = false;
-            legend7.Name = "Legend1";
-            this.chartCoefficient.Legends.Add(legend7);
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
+            chartArea1.AlignWithChartArea = "ChartArea1";
+            chartArea1.AxisX.Crossing = -1.7976931348623157E+308D;
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisX.MinorGrid.Enabled = true;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisX.ScaleView.Zoomable = false;
+            chartArea1.AxisX.Title = "Q, м³";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea1.AxisY.Crossing = -1.7976931348623157E+308D;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Gray;
+            chartArea1.AxisY.Maximum = 100D;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.AxisY.MinorGrid.Enabled = true;
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.Title = "η, %";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.IsSameFontSizeForAllAxes = true;
+            chartArea1.Name = "ChartArea1";
+            this.chartCoefficient.ChartAreas.Add(chartArea1);
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.Enabled = false;
+            legend1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend1.IsDockedInsideChartArea = false;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chartCoefficient.Legends.Add(legend1);
             this.chartCoefficient.Location = new System.Drawing.Point(3, 387);
             this.chartCoefficient.Name = "chartCoefficient";
-            series17.BorderColor = System.Drawing.Color.Black;
-            series17.BorderWidth = 2;
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series17.Color = System.Drawing.Color.Black;
-            series17.CustomProperties = "EmptyPointValue=Zero";
-            series17.Legend = "Legend1";
-            series17.Name = "Полный КПД";
-            series18.BorderColor = System.Drawing.Color.Black;
-            series18.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series18.BorderWidth = 2;
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series18.Color = System.Drawing.Color.Black;
-            series18.Legend = "Legend1";
-            series18.Name = "Статический КПД";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series19.Color = System.Drawing.Color.Black;
-            series19.Legend = "Legend1";
-            series19.Name = "Рабочая точка";
-            this.chartCoefficient.Series.Add(series17);
-            this.chartCoefficient.Series.Add(series18);
-            this.chartCoefficient.Series.Add(series19);
+            series1.BorderColor = System.Drawing.Color.Black;
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Black;
+            series1.CustomProperties = "EmptyPointValue=Zero";
+            series1.Legend = "Legend1";
+            series1.Name = "Полный КПД";
+            series2.BorderColor = System.Drawing.Color.Black;
+            series2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Black;
+            series2.Legend = "Legend1";
+            series2.Name = "Статический КПД";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series3.Color = System.Drawing.Color.Black;
+            series3.Legend = "Legend1";
+            series3.Name = "Рабочая точка";
+            this.chartCoefficient.Series.Add(series1);
+            this.chartCoefficient.Series.Add(series2);
+            this.chartCoefficient.Series.Add(series3);
             this.chartCoefficient.Size = new System.Drawing.Size(352, 183);
             this.chartCoefficient.TabIndex = 7;
             this.chartCoefficient.Text = "chart1";
-            title7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title7.Name = "Title1";
-            title7.Text = "КПД";
-            this.chartCoefficient.Titles.Add(title7);
+            title1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title1.Name = "Title1";
+            title1.Text = "КПД";
+            this.chartCoefficient.Titles.Add(title1);
             // 
             // chartPower
             // 
-            chartArea8.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea8.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
-            chartArea8.AlignWithChartArea = "ChartArea1";
-            chartArea8.AxisX.Crossing = -1.7976931348623157E+308D;
-            chartArea8.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea8.AxisX.IsLabelAutoFit = false;
-            chartArea8.AxisX.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea8.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea8.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Gray;
-            chartArea8.AxisX.Minimum = 0D;
-            chartArea8.AxisX.MinorGrid.Enabled = true;
-            chartArea8.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea8.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisX.ScaleView.Zoomable = false;
-            chartArea8.AxisX.Title = "Q, м³";
-            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea8.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea8.AxisX2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea8.AxisX2.IsLabelAutoFit = false;
-            chartArea8.AxisY.Crossing = -1.7976931348623157E+308D;
-            chartArea8.AxisY.IsLabelAutoFit = false;
-            chartArea8.AxisY.IsStartedFromZero = false;
-            chartArea8.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea8.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea8.AxisY.MinorGrid.Enabled = true;
-            chartArea8.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea8.AxisY.Title = "N, кВт";
-            chartArea8.AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea8.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea8.IsSameFontSizeForAllAxes = true;
-            chartArea8.Name = "ChartArea1";
-            this.chartPower.ChartAreas.Add(chartArea8);
-            legend8.DockedToChartArea = "ChartArea1";
-            legend8.Enabled = false;
-            legend8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend8.IsDockedInsideChartArea = false;
-            legend8.IsTextAutoFit = false;
-            legend8.Name = "Legend1";
-            legend8.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chartPower.Legends.Add(legend8);
+            chartArea2.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea2.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
+            chartArea2.AlignWithChartArea = "ChartArea1";
+            chartArea2.AxisX.Crossing = -1.7976931348623157E+308D;
+            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.AxisX.IsLabelAutoFit = false;
+            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Gray;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisX.MinorGrid.Enabled = true;
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisX.ScaleView.Zoomable = false;
+            chartArea2.AxisX.Title = "Q, м³";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea2.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea2.AxisX2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.AxisX2.IsLabelAutoFit = false;
+            chartArea2.AxisY.Crossing = -1.7976931348623157E+308D;
+            chartArea2.AxisY.IsLabelAutoFit = false;
+            chartArea2.AxisY.IsStartedFromZero = false;
+            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea2.AxisY.MinorGrid.Enabled = true;
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.Title = "N, кВт";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea2.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea2.IsSameFontSizeForAllAxes = true;
+            chartArea2.Name = "ChartArea1";
+            this.chartPower.ChartAreas.Add(chartArea2);
+            legend2.DockedToChartArea = "ChartArea1";
+            legend2.Enabled = false;
+            legend2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend2.IsDockedInsideChartArea = false;
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chartPower.Legends.Add(legend2);
             this.chartPower.Location = new System.Drawing.Point(3, 194);
             this.chartPower.Name = "chartPower";
-            series20.BorderColor = System.Drawing.Color.Black;
-            series20.BorderWidth = 2;
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series20.Color = System.Drawing.Color.Black;
-            series20.CustomProperties = "EmptyPointValue=Zero";
-            series20.Legend = "Legend1";
-            series20.Name = "Мощность";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series21.Color = System.Drawing.Color.Black;
-            series21.Legend = "Legend1";
-            series21.Name = "Рабочая точка";
-            this.chartPower.Series.Add(series20);
-            this.chartPower.Series.Add(series21);
+            series4.BorderColor = System.Drawing.Color.Black;
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Color = System.Drawing.Color.Black;
+            series4.CustomProperties = "EmptyPointValue=Zero";
+            series4.Legend = "Legend1";
+            series4.Name = "Мощность";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series5.Color = System.Drawing.Color.Black;
+            series5.Legend = "Legend1";
+            series5.Name = "Рабочая точка";
+            this.chartPower.Series.Add(series4);
+            this.chartPower.Series.Add(series5);
             this.chartPower.Size = new System.Drawing.Size(352, 185);
             this.chartPower.TabIndex = 6;
             this.chartPower.Text = "chart1";
-            title8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title8.Name = "Title1";
-            title8.Text = "Мощность";
-            this.chartPower.Titles.Add(title8);
+            title2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title2.Name = "Title1";
+            title2.Text = "Мощность";
+            this.chartPower.Titles.Add(title2);
             // 
             // chartPressure
             // 
-            chartArea9.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea9.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
-            chartArea9.AlignWithChartArea = "ChartArea1";
-            chartArea9.AxisX.Crossing = -1.7976931348623157E+308D;
-            chartArea9.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea9.AxisX.IsStartedFromZero = false;
-            chartArea9.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
+            chartArea3.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea3.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.AxesView;
+            chartArea3.AlignWithChartArea = "ChartArea1";
+            chartArea3.AxisX.Crossing = -1.7976931348623157E+308D;
+            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.AxisX.IsStartedFromZero = false;
+            chartArea3.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
             | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30)));
-            chartArea9.AxisX.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea9.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea9.AxisX.MinorGrid.Enabled = true;
-            chartArea9.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea9.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea9.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea9.AxisX.ScaleView.Zoomable = false;
-            chartArea9.AxisX.Title = "Q, м³";
-            chartArea9.AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea9.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea9.AxisY.IsLabelAutoFit = false;
-            chartArea9.AxisY.IsStartedFromZero = false;
-            chartArea9.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea9.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea9.AxisY.MinorGrid.Enabled = true;
-            chartArea9.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea9.AxisY.Title = "P, МПа";
-            chartArea9.AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea9.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea9.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea9.IsSameFontSizeForAllAxes = true;
-            chartArea9.Name = "ChartArea1";
-            this.chartPressure.ChartAreas.Add(chartArea9);
-            legend9.DockedToChartArea = "ChartArea1";
-            legend9.Enabled = false;
-            legend9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            legend9.IsDockedInsideChartArea = false;
-            legend9.IsTextAutoFit = false;
-            legend9.Name = "Legend1";
-            this.chartPressure.Legends.Add(legend9);
+            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea3.AxisX.MinorGrid.Enabled = true;
+            chartArea3.AxisX.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisX.ScaleView.MinSizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisX.ScaleView.SizeType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisX.ScaleView.Zoomable = false;
+            chartArea3.AxisX.Title = "Q, м³";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea3.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea3.AxisY.IsLabelAutoFit = false;
+            chartArea3.AxisY.IsStartedFromZero = false;
+            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea3.AxisY.MinorGrid.Enabled = true;
+            chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY.Title = "P, Па";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea3.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea3.IsSameFontSizeForAllAxes = true;
+            chartArea3.Name = "ChartArea1";
+            this.chartPressure.ChartAreas.Add(chartArea3);
+            legend3.DockedToChartArea = "ChartArea1";
+            legend3.Enabled = false;
+            legend3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend3.IsDockedInsideChartArea = false;
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            this.chartPressure.Legends.Add(legend3);
             this.chartPressure.Location = new System.Drawing.Point(3, 3);
             this.chartPressure.Name = "chartPressure";
-            series22.BorderColor = System.Drawing.Color.Black;
-            series22.BorderWidth = 2;
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series22.Color = System.Drawing.Color.Black;
-            series22.CustomProperties = "EmptyPointValue=Zero";
-            series22.Legend = "Legend1";
-            series22.Name = "Полное давление";
-            series23.BorderColor = System.Drawing.Color.Black;
-            series23.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series23.BorderWidth = 2;
-            series23.ChartArea = "ChartArea1";
-            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series23.Color = System.Drawing.Color.Black;
-            series23.Legend = "Legend1";
-            series23.Name = "Статическое давление";
-            series24.ChartArea = "ChartArea1";
-            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
-            series24.Color = System.Drawing.Color.Black;
-            series24.Legend = "Legend1";
-            series24.Name = "Рабочая точка";
-            this.chartPressure.Series.Add(series22);
-            this.chartPressure.Series.Add(series23);
-            this.chartPressure.Series.Add(series24);
+            series6.BorderColor = System.Drawing.Color.Black;
+            series6.BorderWidth = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Color = System.Drawing.Color.Black;
+            series6.CustomProperties = "EmptyPointValue=Zero";
+            series6.Legend = "Legend1";
+            series6.Name = "Полное давление";
+            series7.BorderColor = System.Drawing.Color.Black;
+            series7.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series7.BorderWidth = 2;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Color = System.Drawing.Color.Black;
+            series7.Legend = "Legend1";
+            series7.Name = "Статическое давление";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
+            series8.Color = System.Drawing.Color.Black;
+            series8.Legend = "Legend1";
+            series8.Name = "Рабочая точка";
+            this.chartPressure.Series.Add(series6);
+            this.chartPressure.Series.Add(series7);
+            this.chartPressure.Series.Add(series8);
             this.chartPressure.Size = new System.Drawing.Size(352, 185);
             this.chartPressure.TabIndex = 5;
             this.chartPressure.Text = "chart1";
-            title9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title9.Name = "Title1";
-            title9.Text = "Давление";
-            this.chartPressure.Titles.Add(title9);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            title3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title3.Name = "Title1";
+            title3.Text = "Давление";
+            this.chartPressure.Titles.Add(title3);
             // 
             // checkBox1
             // 
@@ -493,6 +428,72 @@
             this.checkBox1.Text = "Показать рабочую точку ";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckStateChanged += new System.EventHandler(this.checkBox1_CheckStateChanged);
+            // 
+            // airFlow
+            // 
+            this.airFlow.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.airFlow.DefaultCellStyle = dataGridViewCellStyle1;
+            this.airFlow.HeaderText = "Q, м³";
+            this.airFlow.Name = "airFlow";
+            this.airFlow.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.airFlow.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.airFlow.ToolTipText = "Расход воздуха";
+            // 
+            // fullPressure
+            // 
+            this.fullPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.fullPressure.DefaultCellStyle = dataGridViewCellStyle2;
+            this.fullPressure.HeaderText = "Pv, Па";
+            this.fullPressure.Name = "fullPressure";
+            this.fullPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fullPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fullPressure.ToolTipText = "Полное давление";
+            // 
+            // staticPressure
+            // 
+            this.staticPressure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.staticPressure.DefaultCellStyle = dataGridViewCellStyle3;
+            this.staticPressure.HeaderText = "Ps, Па";
+            this.staticPressure.Name = "staticPressure";
+            this.staticPressure.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.staticPressure.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.staticPressure.ToolTipText = "Статическое давление";
+            // 
+            // power
+            // 
+            this.power.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.power.DefaultCellStyle = dataGridViewCellStyle4;
+            this.power.HeaderText = "N, кВт";
+            this.power.Name = "power";
+            this.power.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.power.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.power.ToolTipText = "Мощность";
+            // 
+            // efficiencyFull
+            // 
+            this.efficiencyFull.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.efficiencyFull.DefaultCellStyle = dataGridViewCellStyle5;
+            this.efficiencyFull.HeaderText = "ηv";
+            this.efficiencyFull.Name = "efficiencyFull";
+            this.efficiencyFull.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.efficiencyFull.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.efficiencyFull.ToolTipText = "Полный КПД";
+            // 
+            // efficiencyStatic
+            // 
+            this.efficiencyStatic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.efficiencyStatic.DefaultCellStyle = dataGridViewCellStyle6;
+            this.efficiencyStatic.HeaderText = "ηs";
+            this.efficiencyStatic.Name = "efficiencyStatic";
+            this.efficiencyStatic.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.efficiencyStatic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.efficiencyStatic.ToolTipText = "Статический КПД";
             // 
             // Form1
             // 
@@ -529,17 +530,17 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripButton clearButton;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPower;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartCoefficient;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPressure;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn airFlow;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullPressure;
         private System.Windows.Forms.DataGridViewTextBoxColumn staticPressure;
         private System.Windows.Forms.DataGridViewTextBoxColumn power;
         private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyFull;
         private System.Windows.Forms.DataGridViewTextBoxColumn efficiencyStatic;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartPower;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartCoefficient;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartPressure;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
