@@ -12,7 +12,7 @@ namespace Graphs
     {
         /// <summary>
         /// Air flow at the operating point
-        /// </summary>
+        /// </summary> 
         public static double Q = 0;
         /// <summary>
         /// Uncut array of formatted input data
